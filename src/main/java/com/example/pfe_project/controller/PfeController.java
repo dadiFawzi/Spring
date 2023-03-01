@@ -34,13 +34,12 @@ public List<Pfe> getPfeByType(@PathVariable ("type")String type){
         ArrayList<Pfe> l = (ArrayList<Pfe>) repository.findAll();
         List<Pfe> l2 = new ArrayList<Pfe>();
    l.forEach((p)-> {
-       System.out.println(p.getTitle());
-       System.out.println("type :"+p.getType());
+
+       int i = 0 ;
        if(p.getType().equals(type)){
-           l2.add(p);
+          l2.add(p);
            System.out.println(p.getType());
        };
-        
     });
         
         
